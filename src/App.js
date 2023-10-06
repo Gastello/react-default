@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import ConstItems from "./components/CostItems";
 
 function App() {
+  const ITEMS = [
+    {
+      name: "IPhone 15 Pro",
+      cost: 599.99,
+      date: new Date(2023, 9, 7),
+    },
+    {
+      name: "Xiaomi Q1E",
+      cost: 500.0,
+      date: new Date(2023, 11, 12),
+    },
+    {
+      name: "Dyson",
+      cost: 699.99,
+      date: new Date(2023, 11, 25),
+    },
+    {
+      name: "Golf IV",
+      cost: 1500.0,
+      date: new Date(2023, 11, 29),
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ConstItems items={ITEMS} />
+    </>
   );
 }
 
